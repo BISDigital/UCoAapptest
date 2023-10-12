@@ -21,8 +21,8 @@ jobs:
            uses: actions/checkout@v3
          - name: Install dependecies
            run: npm install
-         - name: npm run Build
-           run: npm run serve
+         - name: Build project
+           run: npm run build
          - name: Deploy
            run: echo "Deploying ..."
          
