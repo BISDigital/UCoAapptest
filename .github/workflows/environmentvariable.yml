@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run:  npm install
       - name: Run server
-        run: npm start & npx wait-on http://127.0.0.1:XYZ
+        run: npm start & npx wait-on https://beis.okta-emea.com/oauth2/default
       - name: Output information
         run: echo "..."
   deploy:
