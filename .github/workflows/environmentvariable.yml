@@ -6,7 +6,11 @@ on:
       - dev
 jobs:
   test:
-    environment: testing
+    env:
+         VUE_APP_BASE_URL= https://ucoa.epmtest.ssc.rcuk.ac.uk/api
+         VUE_APP_OKTA_PARAMS.issuer = https://referencebuild.oktapreview.com/oauth2/default
+         VUE_APP_OKTA_PARAMS.client_id = 0oam7lcsahCWlmJKk0h7 
+         PORT:8081
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
