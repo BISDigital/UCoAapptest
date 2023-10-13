@@ -1,0 +1,45 @@
+# This is a basic workflow to help you get started with Actions
+
+name: three-evn
+
+# Controls when the workflow will run
+on:
+   workflow_dispatch:  
+# A workflow run is made up of one ore more jobs that can run sequentially or in parallel
+jobs:
+  DEV:
+
+   runs-on: ubuntu-latest
+   environment: DEV 
+
+   steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a script
+        run:
+           echo "I am running a job in the DEV environment"
+
+  QA:
+
+        runs-on: ubuntu-latest
+        environment: QA
+
+        steps:
+           - uses: actions/checkout@v2
+
+           - name: Run a script
+             run:
+                echo "I am running a job in the QA environment"
+
+  PROD:
+
+          runs-on: ubuntu-latest
+          environment: PROD
+
+          steps:
+           - uses: actions/checkout@v2
+
+           - name: Run a script
+             run:
+                echo "I am running a job in the PROD environment"
+ 
