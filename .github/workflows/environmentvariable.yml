@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run:  npm install
       - name: Run server
-        run: npm run serve & npx wait-on http://10.202.31.100:8081/
+        run: npm run serve http://10.202.31.100:8081/
       - name: Output information
         run: echo "..."
   deploy:
